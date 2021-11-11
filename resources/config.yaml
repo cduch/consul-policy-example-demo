@@ -5,7 +5,11 @@ global:
   enableConsulNamespaces: true  
   acls:
     createReplicationToken: true
-    manageSystemACLs: true      
+    manageSystemACLs: true  
+
+  metrics:
+    enabled: true
+
 meshGateway:
   enabled: true
   replicas: 1
@@ -26,6 +30,12 @@ ui:
   enabled: true
   service:
     type: 'NodePort'
+
+metrics:
+    enabled: true
+    provider: "prometheus"
+    baseURL: http://prometheus-server
+
 connectInject:
   enabled: true
   default: true
@@ -40,3 +50,7 @@ syncCatalog:
   consulNamespaces:
     mirroringK8S: true
     mirroringK8SPrefix: k8s-
+
+
+prometheus:
+  enabled: true

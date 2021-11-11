@@ -7,4 +7,4 @@ consul acl policy create -name "team2" -description "Team 2 Policy" -rules @reso
 consul acl policy create -name "team3" -description "Team 3 Policy" -rules @resources/policies/team3-policy.hcl
 
 consul acl policy update -name "anonymous-token-policy" -description "Anonymous token Policy" -rules @resources/policies/anonymous-token-policy.hcl
-consul acl policy update -name "cross-namespace-policy" -description "" -rules @resources/policies/cross-namespace-policy.hcl
+#temporary disabled the changes consul acl policy update -name "cross-namespace-policy" -description "" -rules @resources/policies/cross-namespace-policy.hcl
